@@ -13,12 +13,16 @@ function getComputerChoice(){
     }
 }
 
-function playRound(){
+function getPlayerChoice(){
     let playerChoice = prompt("Please choose between rock, paper or scissors");
-    let computerChoice = getComputerChoice();
-
     playerChoice = playerChoice.toLowerCase();
-    
+    return playerChoice;
+}
+
+function playRound(){
+    let computerChoice = getComputerChoice();
+    let playerChoice = getPlayerChoice();
+        
     if(computerChoice == "rock"){
         if(playerChoice == "rock"){
             console.log("It's a draw! Rock and Rock.")
